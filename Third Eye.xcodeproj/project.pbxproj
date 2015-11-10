@@ -25,8 +25,8 @@
 		84356D211BD1B9EA00BFE6F3 /* MonitorTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84356D201BD1B9EA00BFE6F3 /* MonitorTagsViewController.swift */; };
 		84356D241BD2ED0700BFE6F3 /* ITagObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84356D231BD2ED0700BFE6F3 /* ITagObserver.swift */; };
 		847C67CC1BD5E1760003B4B5 /* emergency022.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 847C67CB1BD5E1760003B4B5 /* emergency022.mp3 */; };
-		84E525881BF038BC00FA3470 /* MontiorTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E525871BF038BC00FA3470 /* MontiorTagViewController.swift */; };
 		84E5258A1BF03DE000FA3470 /* UnregisteredTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E525891BF03DE000FA3470 /* UnregisteredTagViewController.swift */; };
+		84E5258C1BF1A5C500FA3470 /* MonitorTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E5258B1BF1A5C500FA3470 /* MonitorTagViewController.swift */; };
 		84F5DFA31BE8605A00A8DF73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F5DFA11BE8605A00A8DF73 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +63,8 @@
 		84356D201BD1B9EA00BFE6F3 /* MonitorTagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorTagsViewController.swift; sourceTree = "<group>"; };
 		84356D231BD2ED0700BFE6F3 /* ITagObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITagObserver.swift; sourceTree = "<group>"; };
 		847C67CB1BD5E1760003B4B5 /* emergency022.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = emergency022.mp3; sourceTree = "<group>"; };
-		84E525871BF038BC00FA3470 /* MontiorTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MontiorTagViewController.swift; sourceTree = "<group>"; };
 		84E525891BF03DE000FA3470 /* UnregisteredTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnregisteredTagViewController.swift; sourceTree = "<group>"; };
+		84E5258B1BF1A5C500FA3470 /* MonitorTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorTagViewController.swift; sourceTree = "<group>"; };
 		84F5DFA21BE8605A00A8DF73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,8 +183,8 @@
 		84356D1F1BD1B93300BFE6F3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84E5258B1BF1A5C500FA3470 /* MonitorTagViewController.swift */,
 				84356D201BD1B9EA00BFE6F3 /* MonitorTagsViewController.swift */,
-				84E525871BF038BC00FA3470 /* MontiorTagViewController.swift */,
 				84E525891BF03DE000FA3470 /* UnregisteredTagViewController.swift */,
 			);
 			name = ViewControllers;
@@ -317,7 +317,6 @@
 				84356D071BC9913000BFE6F3 /* MappedBeacons.swift in Sources */,
 				84356D1E1BD1A17800BFE6F3 /* TagMonitor.swift in Sources */,
 				84356D171BCF0D7300BFE6F3 /* TagManager.swift in Sources */,
-				84E525881BF038BC00FA3470 /* MontiorTagViewController.swift in Sources */,
 				84356D211BD1B9EA00BFE6F3 /* MonitorTagsViewController.swift in Sources */,
 				84356D0B1BCAE88200BFE6F3 /* FoundTagsViewController.swift in Sources */,
 				84E5258A1BF03DE000FA3470 /* UnregisteredTagViewController.swift in Sources */,
@@ -327,6 +326,7 @@
 				84356D0D1BCAF46D00BFE6F3 /* FoundTagViewCell.swift in Sources */,
 				84356CDF1BC75C8D00BFE6F3 /* AppDelegate.swift in Sources */,
 				84356D091BC992E200BFE6F3 /* Tag.swift in Sources */,
+				84E5258C1BF1A5C500FA3470 /* MonitorTagViewController.swift in Sources */,
 				84356D241BD2ED0700BFE6F3 /* ITagObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

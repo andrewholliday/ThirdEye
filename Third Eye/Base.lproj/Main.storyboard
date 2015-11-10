@@ -23,7 +23,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onRegisterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzn-tR-3aU"/>
-                                    <segue destination="gcq-OU-ujh" kind="push" id="2eF-f3-CWK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mTw-YP-TNW">
@@ -36,7 +35,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onRegisterClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nf-5K-946"/>
-                                    <segue destination="rdU-0i-m9m" kind="push" id="Zdr-cO-Zii"/>
+                                    <segue destination="rdU-0i-m9m" kind="push" id="mYn-zg-OKd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,31 +46,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716" y="-420"/>
+            <point key="canvasLocation" x="634" y="-220"/>
         </scene>
         <!--Monitor Tags View Controller-->
         <scene sceneID="uyG-vP-Tx7">
             <objects>
                 <viewController id="rDF-6h-4E3" customClass="MonitorTagsViewController" customModule="Third_Eye" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fvh-8N-v4a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="G3A-CP-5Xv">
-                                <rect key="frame" x="5" y="20" width="375" height="667"/>
+                                <rect key="frame" x="5" y="20" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TagTableCell" id="aBW-JY-6To">
-                                        <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aBW-JY-6To" id="bnx-4P-B6r">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="mnS-rd-tFR" kind="push" identifier="UnregisteredTag" id="SYH-3c-APw"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -228,7 +224,7 @@
         <!--Registered Tags-->
         <scene sceneID="okW-eH-hkd">
             <objects>
-                <viewController title="Registered Tags" id="rdU-0i-m9m" customClass="MontiorTagViewController" customModule="Third_Eye" sceneMemberID="viewController">
+                <viewController title="Registered Tags" id="rdU-0i-m9m" customClass="MonitorTagViewController" customModule="Third_Eye" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cgc-cs-pip">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,12 +236,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="oRS-8X-708">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MTagTableCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" id="oRS-8X-708">
                                 <rect key="frame" x="0.0" y="102" width="320" height="466"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MonitoredTagTableCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="68" id="4Ky-WG-JGd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MonitoredTagTableCell" rowHeight="68" id="4Ky-WG-JGd">
                                         <rect key="frame" x="0.0" y="28" width="320" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Ky-WG-JGd" id="Ail-FE-nbZ">
@@ -260,61 +257,76 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Registed Tags" id="Qhn-yp-reP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uOe-Z3-ND4">
+                            <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="QUg-IA-rgc" kind="push" id="gfR-fq-IqA"/>
+                                <segue destination="0H7-OH-rBd" kind="push" id="zlu-Ju-bjE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lblMonitoredTags" destination="oRS-8X-708" id="Ve1-ht-hoV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwn-Q5-aB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="677" y="366"/>
+            <point key="canvasLocation" x="547" y="466"/>
         </scene>
         <!--Unregistered Tags-->
-        <scene sceneID="lHb-Si-rKM">
+        <scene sceneID="hGA-PQ-EWM">
             <objects>
-                <viewController id="QUg-IA-rgc" customClass="UnregisteredTagViewController" customModule="Third_Eye" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cHD-Ef-vFO">
+                <viewController id="0H7-OH-rBd" customClass="UnregisteredTagViewController" customModule="Third_Eye" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hdf-cF-Vxo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UnregisteredTagTableCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zcV-Mi-XEX">
-                                <rect key="frame" x="0.0" y="116" width="320" height="432"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a9d-bZ-ESA">
+                                <rect key="frame" x="12" y="89" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jlf-35-0ve">
+                                <rect key="frame" x="6" y="118" width="267" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="95T-5C-MBu">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UnregisteredTagTableCell" id="eb9-ZL-HIw">
+                                        <rect key="frame" x="0.0" y="92" width="267" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="95T-5C-MBu" id="EZ8-kZ-KwA">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eb9-ZL-HIw" id="5Pw-mS-TsV">
+                                            <rect key="frame" x="0.0" y="0.0" width="234" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="mnS-rd-tFR" kind="push" identifier="UnregisteredTag" id="f69-i6-0k7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="cHD-Ef-vFO" id="lIg-b2-Plo"/>
-                                    <outlet property="delegate" destination="cHD-Ef-vFO" id="P7B-es-ecw"/>
+                                    <outlet property="dataSource" destination="0H7-OH-rBd" id="iWh-oR-jF7"/>
+                                    <outlet property="delegate" destination="0H7-OH-rBd" id="0fk-D4-3SN"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Unregistered Tags" id="Wsl-K3-Szb"/>
+                    <navigationItem key="navigationItem" title="Unregistered Tags" id="kfT-3D-hqg"/>
                     <connections>
-                        <outlet property="lblUnregisteredTags" destination="zcV-Mi-XEX" id="owc-Oa-qCj"/>
+                        <outlet property="lblTagsFoundMessage" destination="a9d-bZ-ESA" id="b4v-tk-I8T"/>
+                        <outlet property="tblUnregistered" destination="Jlf-35-0ve" id="SUD-62-uf3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5UZ-2q-kSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrH-Xb-Qrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="897"/>
+            <point key="canvasLocation" x="950" y="377"/>
         </scene>
         <!--Register Child-->
         <scene sceneID="xm1-wT-r7v">
@@ -406,12 +418,11 @@
                         <outlet property="lblMinor" destination="DOu-Xf-suA" id="HYl-RK-qrX"/>
                         <outlet property="sldDistance" destination="bdg-Ex-M4q" id="KLC-TX-YBX"/>
                         <outlet property="txtChildName" destination="8IO-OB-oYe" id="GcV-pd-sN1"/>
-                        <segue destination="rDF-6h-4E3" kind="push" identifier="RegisteredTagSegue" id="aJ1-H3-T5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zTV-9r-7fV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405.5" y="322.5"/>
+            <point key="canvasLocation" x="1337.5" y="426.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3Ue-1L-fI2">
@@ -429,7 +440,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJD-KL-pzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.33333333333333" y="-146.73333333333332"/>
+            <point key="canvasLocation" x="190" y="114"/>
         </scene>
     </scenes>
     <resources>

@@ -8,14 +8,35 @@
 
 import UIKit
 
-class UnregisteredTagViewController: UIViewController {
+class UnregisteredTagViewController: UIViewController, ITagObserver {
     
     
-    @IBOutlet var lblUnregisteredTags: UITableView!
+    @IBOutlet weak var tblUnregistered: UITableView!
+    @IBOutlet var lblTagsFoundMessage: UILabel!
+    
+     var SelectedTagIndex = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        TagManager.Service.RemoveAllUnregisteredTags()
+        TagManager.Service.RegisterObserver(self)
+        TagMonitor.Service.StartMonitor()
+    }
+    
+    func UpdateView()
+    {
+        tblUnregistered.reloadData()
+        
+        if (TagManager.Service.unregisteredTags.count > 0)
+        {
+            lblTagsFoundMessage.text = "Unregistered Tags Found"
+        }
+        else
+        {
+             lblTagsFoundMessage.text = "No Unregistered Tags Found"
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +55,7 @@ class UnregisteredTagViewController: UIViewController {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return TagManager.Service.registedTags.count
+        return TagManager.Service.unregisteredTags.count
     }
     
     
@@ -48,7 +69,7 @@ class UnregisteredTagViewController: UIViewController {
         
                 if (indexPath.section == 0)
                 {
-                    cell.textLabel?.text = " Tag: " + String(TagManager.Service.unregisteredTags[indexPath.row].minor) + " " + String(TagManager.Service.unregisteredTags[indexPath.row].minor)
+                    cell.textLabel?.text = " Tag: " + String(TagManager.Service.unregisteredTags[indexPath.row].major) + " " + String(TagManager.Service.unregisteredTags[indexPath.row].minor)
                 }
         //        else if (indexPath.section == 1)
         //        {
@@ -60,8 +81,38 @@ class UnregisteredTagViewController: UIViewController {
         
         // }
         
-        
         return cell
+    }
+    
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        if (indexPath.section == 0) {
+            self.SelectedTagIndex = indexPath.row
+            //         self.performSegueWithIdentifier("UnregisteredTag", sender: self)
+        }
+        
+        //
+        //        let row = indexPath.row
+        //    println(array[indexPath.row])
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
+        
+    {
+        
+        if segue.identifier == "UnregisteredTag"
+            
+        {
+            let detailsViewController = segue.destinationViewController as? RegisterViewController
+            detailsViewController!.SelectedTag  =  TagManager.Service.unregisteredTags[self.SelectedTagIndex]
+            
+        }
+        
+        
+        
+        
     }
 
 

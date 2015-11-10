@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MontiorTagViewController: UIViewController {
+class MonitorTagViewController: UIViewController {
 
     
     @IBOutlet var lblMonitoredTags: UITableView!
